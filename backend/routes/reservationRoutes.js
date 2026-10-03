@@ -1,0 +1,11 @@
+import { Router } from 'express';
+import auth from '../middleware/authMiddleware.js';
+import admin from '../middleware/adminMiddleware.js';
+import { cancelReservation, createReservation, getMyReservations, getReservations } from '../controllers/reservationController.js';
+const router = Router();
+router.use(auth);
+router.post('/', createReservation);
+router.get('/my', getMyReservations);
+router.get('/', admin, getReservations);
+router.delete('/:id', cancelReservation);
+export default router;

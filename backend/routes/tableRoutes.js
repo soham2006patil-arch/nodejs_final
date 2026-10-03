@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import auth from '../middleware/authMiddleware.js';
+import admin from '../middleware/adminMiddleware.js';
+import { createTable, deleteTable, getAvailableTables, getTable, getTables, updateTable } from '../controllers/tableController.js';
+const router = Router();
+router.get('/available', getAvailableTables);
+router.get('/', getTables);
+router.get('/:id', getTable);
+router.post('/', auth, admin, createTable);
+router.put('/:id', auth, admin, updateTable);
+router.delete('/:id', auth, admin, deleteTable);
+export default router;

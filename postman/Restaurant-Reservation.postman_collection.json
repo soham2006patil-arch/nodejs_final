@@ -1,0 +1,24 @@
+{
+  "info": { "name": "Restaurant Table Reservation System", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:5000/api" }, { "key": "token", "value": "PASTE_JWT_HERE" }, { "key": "tableId", "value": "PASTE_TABLE_ID_HERE" }, { "key": "reservationId", "value": "PASTE_RESERVATION_ID_HERE" }],
+  "item": [
+    { "name": "AUTH", "item": [
+      { "name": "Register", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Aarav Student\",\n  \"email\": \"aarav@example.com\",\n  \"password\": \"secret123\"\n}" }, "url": "{{baseUrl}}/auth/register" } },
+      { "name": "Login", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"email\": \"aarav@example.com\",\n  \"password\": \"secret123\"\n}" }, "url": "{{baseUrl}}/auth/login" } }
+    ] },
+    { "name": "TABLES", "item": [
+      { "name": "Create Table (Admin)", "request": { "method": "POST", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"tableNumber\": 1,\n  \"capacity\": 4,\n  \"location\": \"Window\"\n}" }, "url": "{{baseUrl}}/tables" } },
+      { "name": "Get Tables", "request": { "method": "GET", "url": "{{baseUrl}}/tables" } },
+      { "name": "Get Table", "request": { "method": "GET", "url": "{{baseUrl}}/tables/{{tableId}}" } },
+      { "name": "Update Table (Admin)", "request": { "method": "PUT", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"capacity\": 6,\n  \"location\": \"Main Hall\"\n}" }, "url": "{{baseUrl}}/tables/{{tableId}}" } },
+      { "name": "Delete Table (Admin)", "request": { "method": "DELETE", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/tables/{{tableId}}" } },
+      { "name": "Get Available Tables", "request": { "method": "GET", "url": "{{baseUrl}}/tables/available?date=2026-10-10&startTime=19:00&endTime=21:00&partySize=4" } }
+    ] },
+    { "name": "RESERVATIONS", "item": [
+      { "name": "Create Reservation", "request": { "method": "POST", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"table\": \"{{tableId}}\",\n  \"reservationDate\": \"2026-10-10\",\n  \"startTime\": \"19:00\",\n  \"endTime\": \"21:00\",\n  \"partySize\": 4\n}" }, "url": "{{baseUrl}}/reservations" } },
+      { "name": "Get My Reservations", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/reservations/my" } },
+      { "name": "Get Reservations By Date (Admin)", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/reservations?date=2026-10-10" } },
+      { "name": "Cancel Reservation", "request": { "method": "DELETE", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/reservations/{{reservationId}}" } }
+    ] }
+  ]
+}
