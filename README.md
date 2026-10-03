@@ -158,7 +158,17 @@ Deploy `frontend` to Vercel or Netlify with `npm run build` and set `VITE_API_UR
 
 ## Screenshots
 
-_Add screenshots of the login page, customer reservation flow, and admin dashboard here before submission._
+<img width="425" height="244" alt="image" src="https://github.com/user-attachments/assets/9e23d0f5-eee2-4008-bb5c-faafb05c954e" />
+<img width="425" height="245" alt="image" src="https://github.com/user-attachments/assets/82add6ec-8335-4a2a-849c-4e1bccdf94ef" />
+<img width="425" height="244" alt="image" src="https://github.com/user-attachments/assets/5ddb82c1-e78d-442b-9f7f-40b0a0b31fb9" />
+<img width="439" height="157" alt="image" src="https://github.com/user-attachments/assets/eb87f42d-35f7-4bcc-9832-a1e3b34cf575" />
+<img width="439" height="233" alt="image" src="https://github.com/user-attachments/assets/782c26ca-6282-45b1-a8aa-a927f1484ecb" />
+<img width="439" height="137" alt="image" src="https://github.com/user-attachments/assets/b05d7bc1-961a-4efe-963e-70844eb0e11d" />
+<img width="439" height="221" alt="image" src="https://github.com/user-attachments/assets/798b6a57-2f1c-45bd-953d-e592ab2eb9b9" />
+<img width="439" height="281" alt="image" src="https://github.com/user-attachments/assets/2b28bb30-820f-4bc9-bff5-67b8a543e0dc" />
+<img width="439" height="78" alt="image" src="https://github.com/user-attachments/assets/e9330687-2dc1-42e6-ae75-0a82b2c0bc5d" />
+<img width="439" height="137" alt="image" src="https://github.com/user-attachments/assets/f09a1f5a-1822-4a9e-9dd6-4c06255708e1" />
+
 
 ## Academic Concepts Demonstrated
 
