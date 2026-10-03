@@ -1,6 +1,6 @@
 {
   "info": { "name": "Restaurant Table Reservation System", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
-  "variable": [{ "key": "baseUrl", "value": "http://localhost:5000/api" }, { "key": "token", "value": "PASTE_JWT_HERE" }, { "key": "tableId", "value": "PASTE_TABLE_ID_HERE" }, { "key": "reservationId", "value": "PASTE_RESERVATION_ID_HERE" }],
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:5050/api" }, { "key": "token", "value": "PASTE_JWT_HERE" }, { "key": "tableId", "value": "PASTE_TABLE_ID_HERE" }, { "key": "reservationId", "value": "PASTE_RESERVATION_ID_HERE" }],
   "item": [
     { "name": "AUTH", "item": [
       { "name": "Register", "request": { "method": "POST", "header": [{ "key": "Content-Type", "value": "application/json" }], "body": { "mode": "raw", "raw": "{\n  \"name\": \"Aarav Student\",\n  \"email\": \"aarav@example.com\",\n  \"password\": \"secret123\"\n}" }, "url": "{{baseUrl}}/auth/register" } },
